@@ -171,7 +171,3 @@ create_gene_figure <- function(region_chr, region_start, region_end, plot_start_
 }
 
 
-
-
-
-
