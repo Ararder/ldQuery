@@ -1,3 +1,14 @@
+#' Read a bed file into a tibble
+#'
+#' @param path filepath
+#' @param ... arguments to pass to [arrow::read_tsv_arrow()]
+#'
+#' @return a tibble
+#' @export
+#'
+#' @examples \dontrun{
+#' read_bed("file.bed")
+#' }
 read_bed <- function(path, ...) {
   arrow::read_tsv_arrow(path, col_names = FALSE, ...) |>
     dplyr::rename(
