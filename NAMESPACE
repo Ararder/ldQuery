@@ -2,3 +2,4 @@
 
 export(create_gene_figure)
 export(locus_zoom)
+export(read_bed)
