@@ -16,7 +16,19 @@ query_sv <- function(tbl, type = "SNV") {
 }
 
 
-query_topmed <- function(chr, pos, ld_ref) {
+#' Get the LD for a index snp, defined by chr and pos, using reference LD data
+#'
+#' @param chr chromosome in integer format (No support yet for X and Y)
+#' @param pos position
+#' @param ld_ref filepath to the ld reference data
+#'
+#' @returns a [dplyr::tibble()]
+#' @export
+#'
+#' @examples \dontrun{
+#' query_ld(chr = 7, pos = 24398341, ld_ref = "ld_ref_topmed/ld_single_nucleotide_variants/")
+#' }
+query_ld <- function(chr, pos, ld_ref) {
   rlang::check_required(chr)
   rlang::check_required(pos)
   stopifnot(length(chr) == length(pos))

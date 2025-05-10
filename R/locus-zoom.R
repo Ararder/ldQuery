@@ -38,7 +38,7 @@ locus_zoom <- function(gwas, bed_file, build = c("38","37"), expand=100000L, ld_
   # extract required data
   # ----------------------------------------------------------------------------
 
-  ld_info <- query_topmed(chr = locus_data[["chr_numeric"]], pos = locus_data[["pos"]], ld_ref = ld_path)
+  ld_info <- query_ld(chr = locus_data[["chr_numeric"]], pos = locus_data[["pos"]], ld_ref = ld_path)
   plot_start_limit <- as.integer(locus_data[["start"]] - expand)
   plot_end_limit <- as.integer(locus_data[["end"]] + expand)
 

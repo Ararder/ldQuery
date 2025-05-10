@@ -2,4 +2,5 @@
 
 export(create_gene_figure)
 export(locus_zoom)
+export(query_ld)
 export(read_bed)

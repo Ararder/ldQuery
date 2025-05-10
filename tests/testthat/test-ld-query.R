@@ -8,6 +8,6 @@ test_that("ld query ", {
 
   chr <- 7
   pos <- 24398341
-  query_topmed(chr, pos, path)
+  query_ld(chr, pos, path)
 
 })
